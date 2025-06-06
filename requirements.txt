@@ -3,7 +3,12 @@ pandas
 schedule
 python-dotenv
 requests
+<<<<<<< HEAD
 pycoingecko
 coinmarketcapapi
 python-binance
 typing-extensions
+=======
+pytrends
+lxml
+>>>>>>> pr-2-usaflees9-Popularity-in-Socials-
