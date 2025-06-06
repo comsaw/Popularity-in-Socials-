@@ -1,39 +1,40 @@
-# 🤖 AI Crypto Reels Generator
+# Cryptocurrency Content Generation System
 
-This AI agent generates short-form content (Reels/Shorts scripts) focused on **creating profitable crypto tokens**. The output includes scripts, hook titles, hashtags, and CTA suggestions optimized for TikTok, Instagram, and YouTube.
+## Trend Sourcing Configuration
 
-## 🚀 Features
+### Prerequisites
+- Install required dependencies: `pip install -r requirements.txt`
 
-- 📜 Script generation for 15–60 sec Reels
-- 🔥 Trending crypto token topics
-- 🧠 Uses GPT-4 for idea generation
-- 🎯 Optimized for engagement (hooks, CTA, hashtags)
+### API Keys
+To fully utilize trend sourcing capabilities, configure the following optional API keys:
+- NewsAPI Key
+- CryptoCompare API Key
 
-## 📂 Folder Structure
+### Basic Usage
+```python
+from src.trend_sourcing import configure_trend_sources
 
-- `content_generator/` - Main AI content engine
-- `main.py` - Runner script
-- `requirements.txt` - Python dependencies
+# Optional: Configure with API keys
+trend_sourcer = configure_trend_sources(
+    newsapi_key='YOUR_NEWSAPI_KEY', 
+    cryptocompare_key='YOUR_CRYPTOCOMPARE_KEY'
+)
 
-## 🧠 Example Output
+# Get Google Trends
+google_trends = trend_sourcer.get_google_trends(['Bitcoin', 'Ethereum'])
 
-```
-🎬 Title: "This Token Did 100x in 30 Days!"
-📜 Script:
-"Imagine launching a token on Base that goes viral in a week..."
-📌 Hashtags: #CryptoToken #Web3Builders #DeFi100x #CryptoReels
-🎯 CTA: "Follow for the next big launch breakdown."
-```
+# Get Cryptocurrency Market Trends
+crypto_trends = trend_sourcer.get_crypto_trends(['BTC', 'ETH'])
 
-## 🛠 Install & Run
-
-```bash
-git clone https://github.com/YOUR-USERNAME/ai-crypto-reels.git
-cd ai-crypto-reels
-pip install -r requirements.txt
-python main.py
+# Get Cryptocurrency News Trends
+news_trends = trend_sourcer.get_crypto_news_trends(['cryptocurrency', 'blockchain'])
 ```
 
-## 📜 License
+### Supported Trend Sources
+- Google Trends
+- CryptoCompare Market Data
+- NewsAPI (optional)
 
-MIT
+## Development
+- Run tests: `pytest tests/`
+- Ensure all dependencies are installed
