@@ -2,3 +2,8 @@ openai
 pandas
 schedule
 python-dotenv
+requests
+pycoingecko
+coinmarketcapapi
+python-binance
+typing-extensions
