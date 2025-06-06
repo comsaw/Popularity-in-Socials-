@@ -2,3 +2,4 @@ openai
 pandas
 schedule
 python-dotenv
+requests
